@@ -37,13 +37,13 @@ button {
     background: darkgreen;
 }
 
-#label {
+#mylabel {
     color: white;
     font-weight:lighter;
     font-style: italic;
 }
 
-#total-count {
+#totalSave {
     color: white;
     font-weight:lighter;
 }
