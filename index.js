@@ -1,10 +1,9 @@
 // AFTER UPDATE 
-
+let saveEl = document.getElementById("save-el")
 let countEl = document.getElementById("count-el")
+let errorEl = document.getElementById("error-el")
 let count = 0
 
-
-let total = 0
 
 function increment() {
     count = count + 1
@@ -12,11 +11,25 @@ function increment() {
 }
 
 function save() {
-    total += count
-    document.getElementById("totalSave").innerText = total
-    countEl.innerText = 0
-    count = 0
+    if(count == 0) {
+        myError = "You cannot save less than 1 person"
+        errorEl.textContent = myError
+        setTimeout(function(){
+            myError = "" 
+            errorEl.textContent = myError
+        }, 5000)
+
+    }
+    else {
+
+        let countStr = count + " -  "
+        saveEl.textContent += countStr
+        countEl.textContent = 0
+        count = 0
+    }
+
 }
+
 
 
 
