@@ -43,7 +43,18 @@ button {
     font-style: italic;
 }
 
-#totalSave {
+#save-el {
     color: white;
     font-weight:lighter;
+}
+
+#welcomeEl {
+    color: lawngreen;
+    font-size: large;
+}
+
+#error-el {
+    color:red;
+    font-size: large;
+    font-style: italic;
 }
