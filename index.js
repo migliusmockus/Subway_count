@@ -1,4 +1,3 @@
-// AFTER UPDATE 
 let saveEl = document.getElementById("save-el")
 let countEl = document.getElementById("count-el")
 let errorEl = document.getElementById("error-el")
@@ -14,20 +13,24 @@ function save() {
     if(count == 0) {
         myError = "You cannot save less than 1 person"
         errorEl.textContent = myError
-        setTimeout(function(){
+        setTimeout(function myFunction(){
             myError = "" 
             errorEl.textContent = myError
-        }, 5000)
+        }, 4000)
 
     }
     else {
 
-        let countStr = count + " -  "
+        let countStr = count + " - "
         saveEl.textContent += countStr
         countEl.textContent = 0
         count = 0
     }
 
+}
+
+function saveDay() {
+    
 }
 
 
