@@ -1,4 +1,43 @@
+<!-- AFTER UPDATE
+ -->
+
 <html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>People entered:</h1>
+    <h2 id="count-el">0</h2>
+    <button id="increment-btn" onclick="increment()">Increment</button>
+    <br>
+    <button id="save-btn" class="button-home" onclick="total();save()">Save count</button>
+    <h3><label id="mylabel">previous entries:</label></h3>
+    <label id="save-el"></label>
+    <div id="error-el"></div>
+    <br>
+    <label id="mylabel">Total people currently saved</label>
+    <h2 id="total-el">0</h2>
+    <a href="previousDay.html"><button id="load-day-btn">Load previous day</button></a>
+    <!-- <button id="current-day-btn" href="index.html">current day</button> -->
+    <a href="daySaved.html"><button id="save-day-btn">Save current day</button></a>
+
+    <script src="main.js"></script>
+    <script src="savedEntries.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <html>
     <head>
         <link rel="stylesheet" href="index.css">
     </head>
@@ -19,3 +58,4 @@
         <script src="index.js"></script>
     </body>
 </html>
+ -->
