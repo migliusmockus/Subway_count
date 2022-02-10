@@ -1,26 +1,32 @@
+// NEW UPDATE
 let saveEl = document.getElementById("save-el")
 let countEl = document.getElementById("count-el")
 let errorEl = document.getElementById("error-el")
+let totalEl = document.getElementById("total-el") //Here i got the id's on different elements in the index.html file so that i can associate their functions with javascript
 let count = 0
 
-
-function increment() {
+function increment() { // created an increment function which adds +1 everytime you click the increment button
     count = count + 1
-    countEl.innerText = count
+    countEl.innerText = count //the label count-el shows the count
 }
 
+function total(totalStr) { //this function is responsible for logging the total amount of entries by adding the previous entry with the new one.
+    totalStr = parseInt(count, 0)
+    totalEl.textContent = totalStr + count
+    console.log(count)
+} // THIS NEEDS fixing because i cant currently get the total of entries
+
+
 function save() {
-    if(count == 0) {
+    if (count == 0) {
         myError = "You cannot save less than 1 person"
         errorEl.textContent = myError
-        setTimeout(function myFunction(){
-            myError = "" 
+        setTimeout(function() {
+            myError = ""
             errorEl.textContent = myError
         }, 4000)
 
-    }
-    else {
-
+    } else {
         let countStr = count + " - "
         saveEl.textContent += countStr
         countEl.textContent = 0
@@ -29,29 +35,49 @@ function save() {
 
 }
 
-function saveDay() {
+
+
+
+
+
+// let saveEl = document.getElementById("save-el")
+// let countEl = document.getElementById("count-el")
+// let errorEl = document.getElementById("error-el")
+// let count = 0
+
+
+// function increment() {
+//     count = count + 1
+//     countEl.innerText = count
+// }
+
+// function save() {
+//     if(count == 0) {
+//         myError = "You cannot save less than 1 person"
+//         errorEl.textContent = myError
+//         setTimeout(function myFunction(){
+//             myError = "" 
+//             errorEl.textContent = myError
+//         }, 4000)
+
+//     }
+//     else {
+
+//         let countStr = count + " - "
+//         saveEl.textContent += countStr
+//         countEl.textContent = 0
+//         count = 0
+//     }
+
+// }
+
+// function saveDay() {
     
-}
+// }
 
 
 
 
-/* BEFORE UPDATE
-let countEl = document.getElementById("count-el") //Getting the element "count-el" from Index.html file
-let countTotal = document.getElementById("total-label") // Getting the element "total-label" from Index.html file
-let count = 0 // Setting the count variable to 0
-
-function increment() { // creating a function which when run will add +1 to the count variable and update the ID "count-el" in the Index.html file
-    count = count + 1
-    countEl.innerText = count
-}
-
-function save() { // creating a function which will change the count variable to 0 after it saves the "increment" function's total count
-    console.log(count)
-    count = 0
-    countEl.innerText = count
-}
-*/
 
 
 
